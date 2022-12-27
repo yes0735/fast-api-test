@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  fastapi:
+    image: fastapi2
+    command: uvicorn app.main:app --reload
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app:/code/app
